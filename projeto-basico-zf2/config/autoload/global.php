@@ -12,5 +12,30 @@
  */
 
 return array(
-    // ...
+    'navigation' => array(
+         'default' => array(
+             array(
+                 'label' => 'Home',
+                 'route' => 'application',
+             ),
+             array(
+                 'label' => 'Produtos',
+                 'route' => 'application/default',
+                 'controller' => 'produtos',
+//                 'pages' => array(
+//                     array(
+//                         'label' => 'Adiciona',
+//                         'route' => 'application/default',
+//                         'controller' => 'produtos',
+//                         'action' => 'add',
+//                     )
+//                 )
+             ),
+             array(
+                 'label' => 'Clientes',
+                 'route' => 'application/default',
+                 'controller' => 'clientes',
+             )
+         )
+     )
 );

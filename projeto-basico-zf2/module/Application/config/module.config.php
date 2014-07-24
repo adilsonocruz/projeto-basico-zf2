@@ -45,6 +45,8 @@ return array(
                                 'action'     => '[a-zA-Z][a-zA-Z0-9_-]*',
                             ),
                             'defaults' => array(
+                                'controller'    => 'Produtos',
+                                'action' => 'index',
                             ),
                         ),
                     ),
@@ -56,6 +58,9 @@ return array(
         'abstract_factories' => array(
             'Zend\Cache\Service\StorageCacheAbstractServiceFactory',
             'Zend\Log\LoggerAbstractServiceFactory',
+        ),
+        'factories' => array(
+            'Navigation' => 'Zend\Navigation\Service\DefaultNavigationFactory',
         ),
         'aliases' => array(
             'translator' => 'MvcTranslator',
