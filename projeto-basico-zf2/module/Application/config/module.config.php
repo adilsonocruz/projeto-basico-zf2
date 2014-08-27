@@ -62,7 +62,8 @@ return array(
     'controllers' => array(
         'invokables' => array(
             'Application\Controller\Index' => 'Application\Controller\IndexController',
-            'Application\Controller\Album' => 'Application\Controller\AlbumController'
+            'Application\Controller\Album' => 'Application\Controller\AlbumController',
+            'Application\Controller\Origem' => 'Application\Controller\OrigemController'
         ),
     ),
     'view_manager' => array(

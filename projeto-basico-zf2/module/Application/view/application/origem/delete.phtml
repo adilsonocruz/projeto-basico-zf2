@@ -1,0 +1,24 @@
+<?php
+$title = 'Apagar origem';
+$this->headTitle($title);
+?>
+<h1><?php echo $this->escapeHtml($title); ?></h1>
+
+<p>Deseja apagar a origem?
+    '<?php echo $this->escapeHtml($origem->id); ?>' by
+    '<?php echo $this->escapeHtml($origem->nome); ?>'?
+</p>
+<?php
+$url = $this->url('rota_padrao', array(
+    'controller'=>'origem',
+    'action' => 'delete',
+    'id'     => $this->id,
+));
+?>
+<form action="<?php echo $url; ?>" method="post">
+<div>
+    <input type="hidden" name="id" value="<?php echo (int) $origem->id; ?>" />
+    <input type="submit" name="del" value="Yes" />
+    <input type="submit" name="del" value="No" />
+</div>
+</form>
