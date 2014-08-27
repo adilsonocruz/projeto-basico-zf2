@@ -20,35 +20,18 @@ return array(
                     ),
                 ),
             ),
-            // The following is a route to simplify getting started creating
-            // new controllers and actions without needing to create a new
-            // module. Simply drop new controllers in, and you can access them
-            // using the path /application/:controller/:action
-            'application' => array(
-                'type'    => 'Literal',
+            'rota_padrao' => array(
+                'type'    => 'Segment',
                 'options' => array(
-                    'route'    => '/application',
+                    'route'    => '/[:controller[/:action][/:id]]',
+                    'constraints' => array(
+                        'controller' => '[a-zA-Z][a-zA-Z0-9_-]*',
+                        'action'     => '[a-zA-Z][a-zA-Z0-9_-]*',
+                        ),
                     'defaults' => array(
                         '__NAMESPACE__' => 'Application\Controller',
-                        'controller'    => 'Index',
+                        'controller'    => 'album',
                         'action'        => 'index',
-                    ),
-                ),
-                'may_terminate' => true,
-                'child_routes' => array(
-                    'default' => array(
-                        'type'    => 'Segment',
-                        'options' => array(
-                            'route'    => '/[:controller[/:action]]',
-                            'constraints' => array(
-                                'controller' => '[a-zA-Z][a-zA-Z0-9_-]*',
-                                'action'     => '[a-zA-Z][a-zA-Z0-9_-]*',
-                            ),
-                            'defaults' => array(
-                                'controller'    => 'Produtos',
-                                'action' => 'index',
-                            ),
-                        ),
                     ),
                 ),
             ),
@@ -79,8 +62,7 @@ return array(
     'controllers' => array(
         'invokables' => array(
             'Application\Controller\Index' => 'Application\Controller\IndexController',
-            'Application\Controller\Produtos' => 'Application\Controller\ProdutosController',
-            'Application\Controller\Clientes' => 'Application\Controller\ClientesController'
+            'Application\Controller\Album' => 'Application\Controller\AlbumController'
         ),
     ),
     'view_manager' => array(
