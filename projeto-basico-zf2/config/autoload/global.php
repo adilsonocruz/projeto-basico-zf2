@@ -19,9 +19,9 @@ return array(
                  'route' => 'rota_padrao',
              ),
              array(
-                 'label' => 'Produtos',
+                 'label' => 'Albuns',
                  'route' => 'rota_padrao',
-                 'controller' => 'produtos',
+                 'controller' => 'album',
 //                 'pages' => array(
 //                     array(
 //                         'label' => 'Adiciona',
@@ -32,9 +32,9 @@ return array(
 //                 )
              ),
              array(
-                 'label' => 'Clientes',
+                 'label' => 'Origens',
                  'route' => 'rota_padrao',
-                 'controller' => 'clientes',
+                 'controller' => 'origem',
              )
          )
      ),
